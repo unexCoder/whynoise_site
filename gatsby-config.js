@@ -4,7 +4,7 @@ module.exports = {
     title: "why?noise",
     description: "Noise politics and culture",
     copyright:`© 2022 | luigi tamagnini`,
-    keywords: `why?noise, noise, politics, art, aesthetics, culture, music, poetry, code`
+    keywords: `why?noise, noise, noise texture, noise music, noise art, noise article, noise artists, noise politics, noise poetry, noise aesthetics, contemporary noise, noise programming, noise computing, politics, art, aesthetics, culture, music, poetry, code`
   },
   plugins: [
     'gatsby-plugin-image',
@@ -16,8 +16,8 @@ module.exports = {
         path: `${__dirname}/content`,
       }
     },
-    'gatsby-plugin-mdx',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-mdx',
   ],
 };

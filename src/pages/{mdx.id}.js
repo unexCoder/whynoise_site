@@ -9,7 +9,6 @@ import Head from "../components/Head";
 
 const NoisePost = ({data}) => {
     
-    const img = getImage(data.mdx.frontmatter.hero_image)
     let title = data.mdx.frontmatter.section
     title = title.charAt(0).toUpperCase() + title.slice(1)
 
@@ -21,11 +20,9 @@ const NoisePost = ({data}) => {
                     {data.mdx.frontmatter.title}
                 </h3>
                 <p className={postedBy}>Posted by <Link to={data.mdx.frontmatter.href}>{data.mdx.frontmatter.author}</Link> on {data.mdx.frontmatter.date}</p>
-                <GatsbyImage
-                    image={img}
-                    alt={data.mdx.frontmatter.hero_image_alt}
-                />
-                <p className={postedBy}>{data.mdx.frontmatter.hero_image_alt} | Photo: {data.mdx.frontmatter.hero_image_credit_text}</p>
+                {data.mdx.frontmatter.hero_image && <GatsbyImage image={getImage(data.mdx.frontmatter.hero_image)} alt={data.mdx.frontmatter.hero_image_alt} />}
+                {data.mdx.frontmatter.hero_image_alt&& <p className={postedBy}>{data.mdx.frontmatter.hero_image_alt} | Photo: {data.mdx.frontmatter.hero_image_credit_text}</p>}
+                
                 <div className={bodyContent}>
                     <MDXRenderer>
                         {data.mdx.body}

@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-tutorial",
+  "name": "why?noise site & web app",
   "version": "1.0.0",
   "private": true,
-  "description": "Gatsby Tutorial",
+  "description": "Nose politics and culture",
   "author": "Luigi Tamagnini",
   "keywords": [
-    "gatsby"
+    "noise"
   ],
   "scripts": {
     "develop": "gatsby develop",
