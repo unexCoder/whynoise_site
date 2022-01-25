@@ -7,8 +7,17 @@ module.exports = {
     keywords: `why?noise, noise, noise texture, noise music, noise art, noise article, noise artists, noise politics, noise poetry, noise aesthetics, contemporary noise, noise programming, noise computing, politics, art, aesthetics, culture, music, poetry, code`
   },
   plugins: [
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
+    `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-plugin-sharp`,
+    //   options: {
+    //     defaults: {
+    //       quality: 100,
+    //       formats: ['auto', 'webp', 'avif'],
+    //       // placeholder: 'blurred',
+    //     },
+    //   },
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -17,6 +26,7 @@ module.exports = {
       }
     },
     'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-mdx',
   ],
