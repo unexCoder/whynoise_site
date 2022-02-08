@@ -18,11 +18,13 @@ const PoliticsPage = ({ data }) => {
             <Link to={`../${node.id}`} className={entryTitle}>{node.frontmatter.title}</Link>
           </h3>
           <p className={postedBy}>Posted by <Link to={node.frontmatter.href}>{node.frontmatter.author}</Link> on {node.frontmatter.date}</p>
-          {node.frontmatter.hero_image && <GatsbyImage
-            image={getImage(node.frontmatter.hero_image)}
-            alt={node.frontmatter.hero_image_alt}
-          />}
-          <h3 className={postExcerpt}>{node.excerpt}</h3>
+          <Link to={`../${node.id}`}>
+            {node.frontmatter.hero_image && <GatsbyImage
+              image={getImage(node.frontmatter.hero_image)}
+              alt={node.frontmatter.hero_image_alt}
+            />}
+            <h3 className={postExcerpt}>{node.excerpt}</h3>
+          </Link>
         </article>
         ))}
     </Layout>
