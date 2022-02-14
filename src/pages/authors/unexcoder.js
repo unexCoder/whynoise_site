@@ -17,7 +17,7 @@ const UnexPage = ({ data }) => {
                 <Link to={`../../${node.id}`} className={entryTitle}>{node.frontmatter.title}</Link>
               </h3>
               <p className={postedBy}>Posted on {node.frontmatter.date}</p>
-              <h3 className={postExcerpt}>{node.excerpt}</h3>
+              <h3 className={postExcerpt}><Link to={`../../${node.id}`}>{node.excerpt}</Link></h3>
             </article>
       ))}  
       </section>
