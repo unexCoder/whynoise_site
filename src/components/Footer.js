@@ -18,7 +18,8 @@ export default function Footer() {
     
     return (
         <div>
-            <footer className={mainFooter} >{data.site.siteMetadata.copyright}</footer>
+            <footer className={mainFooter} >© 2022 | whynoise.com.ar</footer>
+            {/* <footer className={mainFooter} >{data.site.siteMetadata.copyright}</footer> */}
         </div>
     )
 }
